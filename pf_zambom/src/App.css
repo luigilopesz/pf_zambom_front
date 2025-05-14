@@ -1,0 +1,133 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms, transform 300ms; /* Adicionada transição para transform */
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 1.5em #8a90ffcc); /* Sombra um pouco diferente */
+    transform: scale(1.05); /* Leve aumento no hover */
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 1.5em #61dafbcc); /* Sombra diferente para o logo React */
+    transform: scale(1.05); /* Leve aumento no hover */
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo { /* Se você tiver um segundo link com logo */
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 1.5em; /* Um pouco menos de padding */
+    border: 1px solid #444; /* Borda sutil para o tema escuro */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
+    background-color: #2c2c3e; /* Fundo diferente do body para o card no tema escuro */
+    margin-top: 2em; /* Espaçamento superior */
+    margin-bottom: 2em; /* Espaçamento inferior */
+  }
+  
+  /* Ajustes para o card no tema claro */
+  @media (prefers-color-scheme: light) {
+    .card {
+      border: 1px solid #ddd; /* Borda mais clara */
+      background-color: #ffffff; /* Fundo branco para o card no tema claro */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra mais sutil */
+    }
+  }
+  
+  .read-the-docs {
+    color: #aaa; /* Cor ajustada para melhor contraste no tema escuro */
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .read-the-docs {
+      color: #555; /* Cor para tema claro */
+    }
+  }
+  
+  /* Estilos para a seção de informações do usuário e formulário */
+  /* Você pode adicionar classes específicas no App.jsx para mais controle */
+  div > div { /* Seletor genérico, idealmente use classes */
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 6px;
+  }
+  
+  div > div img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5em;
+  }
+  
+  div > div h2 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  div > div p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    color: #b0b0b0; /* Cor mais suave para email no tema escuro */
+  }
+  
+  @media (prefers-color-scheme: light) {
+    div > div p {
+      color: #454545; /* Cor para email no tema claro */
+    }
+  }
+  
+  
+  input[type='text'], input[type='number'] {
+    padding: 0.5em;
+    margin-bottom: 0.8em;
+    border: 1px solid #555; /* Borda escura */
+    background-color: #252535; /* Fundo escuro para inputs */
+    color: #e1e1e1; /* Texto claro para inputs */
+    border-radius: 4px;
+    width: calc(100% - 1.2em); /* Ajusta a largura considerando o padding */
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+  }
+  
+  @media (prefers-color-scheme: light) {
+    input[type='text'], input[type='number'] {
+      border: 1px solid #ccc; /* Borda clara */
+      background-color: #fff; /* Fundo claro para inputs */
+      color: #213547; /* Texto escuro para inputs */
+    }
+  }
+  
+  /* Estilo para os contêineres de informações do usuário e formulário de tarefa */
+  .user-info-container, .create-task-container {
+    background-color: #252530; /* Um pouco diferente do card principal */
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    border: 1px solid #383840;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .user-info-container, .create-task-container {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+    }
+  }
